@@ -18,9 +18,13 @@ PlayingTimeSystem | 접속시간 플러그인
 
 
 `PlayingTimeS::getTime (Player|string)` 플레이어의 접속시간을 int형으로 출력합니다. (데이터 미 존재시 0 출력)
+
 `PlayingTimeS::getKoreanTime (Player|string)` 플레이어의 접속시간을 a시간 b분 c초로 출력합니다.
+
 `PlayingTimeS::koreanTimeFormat (int)` 시간, 분, 초 단위로 변환합니다. (예: 120 -> 0시간 2분 0초)
+
 `PlayingTimeS::updateTime (Player|string)` 플레이어의 접속시간을 갱신합니다.
+
 `PlayingTimeS::updateAllPlayers ()` 모든 플레이어의 접속시간을 갱신합니다.
 
 
