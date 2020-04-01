@@ -29,7 +29,7 @@ PlayingTimeSystem | 접속시간 플러그인
 `PlayingTimeS::updateAllPlayers ()` 모든 플레이어의 접속시간을 갱신합니다.
 
 
-### 이 플러그인의 특별한 점
+## 이 플러그인의 특별한 점
 
 
 `Task` 를 사용하지 않고 접속시간을 구현했다는게 다른 플러그인과의 차별화 된 부분입니다.
