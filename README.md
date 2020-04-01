@@ -9,8 +9,16 @@ PlayingTimeSystem | 접속시간 플러그인
 `/접속시간 순위 (페이지)`를 입력하면 접속시간 순위를 표시합니다.
 한 페이지 당 5명의 플레이어를 출력하며, 페이지를 비워두면 1 페이지를 표시합니다.
 
+![](https://github.com/neoskr/PlayingTimeS/blob/master/images/Rank.png?raw=true?)
+
+
+
 `/접속시간 확인 (유저)`를 입력하면 유저의 누적 접속시간을 표시합니다.
 유저 입력 칸을 비워둔 경우 본인의 접속시간을 표시합니다.
+
+![](https://github.com/neoskr/PlayingTimeS/blob/master/images/Check.png?raw=true?)
+
+
 
 
 
