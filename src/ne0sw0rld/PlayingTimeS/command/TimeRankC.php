@@ -14,15 +14,15 @@ class TimeRankC extends Command
 {
 
 
-    public function __construct ()
-    {
+	public function __construct ()
+	{
 
 		parent::__construct ('접속시간 순위', '서버에 많이 접속한 유저를 확인합니다', '접속시간 순위 (페이지)', ['timerank']);
 
-    }
+	}
 
 	public function execute (CommandSender $player, string $label, array $args) : bool
-    {
+	{
 
 		$data = PlayingTimeS::updateAllPlayers();
 		arsort ($data);
@@ -34,25 +34,23 @@ class TimeRankC extends Command
 		$page = $max < $page ? $max : $page;
 
 		$key = 0;
-		$player->sendMessage ('§b§l<===== §f접속시간 순위 §b§l| §r§f' . $page . ' §b§l/ §r§f' . $max . ' §b§l=====>§r');
+		$player->sendMessage ('§6§l<===== §f접속시간 순위 §6§l| §r§f' . $page . ' §6§l/ §r§f' . $max . ' §6§l=====>§r');
 
 		foreach ($data as $k => $v)
 		{
 
 			$key ++;
 
-			if ($key >= $page && $key <= ($page * 5))
-			{
+			if ($key < ($page * 5) - 4) continue;
+			if ($key > $page * 5) break;
 
-				$player->sendMessage ('§b§l[§f' . $key . '위§b] §r§7' . $k . ': 누적 ' . PlayingTimeS::koreanTimeFormat ($v));
-
-			}
+			$player->sendMessage ('§6§l[§f' . $key . '위§6] §r§f' . $k . ': 누적 ' . PlayingTimeS::koreanTimeFormat ($v));
 
 		}
 		
 		return true;
 
-    }
+	}
 
 
 }
